@@ -5,7 +5,8 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const registerUser = async (email, name, password) => {
-  if (!email || !name || !password) {
+  if (!email || !name || !password) { 
+    
     const error = new Error('All fields (email, name, password) are required.');
     error.statusCode = 400;
     throw error;
